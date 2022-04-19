@@ -1,4 +1,6 @@
 import { Component, Input, OnInit, Output, } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
+import { ContactoComponent } from '../contacto/contacto.component';
 
 
 @Component({
@@ -16,7 +18,14 @@ export class CardComponent implements OnInit {
   ngOnInit(): void {
     
   }
+  hola(){
+    console.log("hola")
+  }
 
 }
+
+
+
+
 
 
