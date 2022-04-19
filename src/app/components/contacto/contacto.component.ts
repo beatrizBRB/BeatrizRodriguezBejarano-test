@@ -49,12 +49,13 @@ export class ContactoComponent implements OnInit {
     
   }
 
-  //agragmos esta funcion para llamarla en el evento click del boton
+  //agragmos esta funcion para llamarla en el evento click del boton (pruebas intentado que el boton muestre la tarjeta)
+
   agregarDatos(){
     console.log(this.miFormulario.value)
-    /*this.recibidoPadre = this.nombre.value*/
-    alert(new CardComponent())
-    new CardComponent().hola();
+    //this.recibidoPadre = this.nombre.value*/
+    //alert(new CardComponent())
+    //new CardComponent().hola();
     
     
   }
