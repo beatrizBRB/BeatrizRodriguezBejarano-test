@@ -1,5 +1,8 @@
 import { Component, OnInit, Output, Input } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators, NgForm } from '@angular/forms';
+import { CardComponent } from '../card/card.component';
+import { RouterModule } from '@angular/router';
+import { Template } from '@angular/compiler/src/render3/r3_ast';
 //servicio importado al agregar el servicio al constructor
 
 @Component({
@@ -22,7 +25,7 @@ export class ContactoComponent implements OnInit {
 
   //decorador input en duda
   /*recibidoPadre: string;*/
-  @Input() miFormulario: FormGroup = this.fb.group({
+  miFormulario: FormGroup = this.fb.group({
     nombre: ['', Validators.required],
     apellidos: ['', Validators.required],
     edad: ['', [Validators.required, Validators.min(16), Validators.max(55)]],
@@ -30,6 +33,8 @@ export class ContactoComponent implements OnInit {
     email: ['', Validators.required],
     descripcion: [''],
 
+    
+  
   })
   //añado en el constructor servicioDeDatos con el nombre del servicio
   constructor ( private fb: FormBuilder) { 
@@ -41,12 +46,17 @@ export class ContactoComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    
   }
 
   //agragmos esta funcion para llamarla en el evento click del boton
   agregarDatos(){
     console.log(this.miFormulario.value)
     /*this.recibidoPadre = this.nombre.value*/
+    alert(new CardComponent())
+    new CardComponent().hola();
+    
+    
   }
 
 
