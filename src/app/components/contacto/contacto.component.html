@@ -1,0 +1,79 @@
+<form [formGroup]="miFormulario"  autocomplete="off"><!--añadido al implementar el formulario en form.component.ts-->
+    <h2 style="text-align: center;">Te Contactamos</h2>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Nombre</label>
+        <input name= "nombre" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="nombre" required>
+        <span class="form-text text-danger" *ngIf="campoEsValido('nombre')">Debe ingresar un nombre</span>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Apellidos</label>
+         <input name= "apellidos" type="text" class="form-control" id="exampleInputPassword1" formControlName="apellidos" required>
+         <span class="form-text text-danger" *ngIf="campoEsValido('apellidos')">Debe ingresar los apellidos</span>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Edad</label>
+        <input type="number" class="form-control" id="exampleInputPassword1" formControlName="edad" required>
+        <span class="form-text text-danger" *ngIf="campoEsValido('edad')">Bede ingresar una edad no inferior a 16 y superior a 55</span>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Número Télefono</label>
+        <input type="number" class="form-control" id="exampleInputPassword1" formControlName="numero" required>
+        <span class="form-text text-danger" *ngIf="campoEsValido('numero')">Debe ingresar un número de telefono válido</span>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Email</label>
+        <input type="email" class="form-control" id="exampleInputPassword1" formControlName="email" required>
+        <span class="form-text text-danger" *ngIf="campoEsValido('email')">Debe ingresar un email</span>
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" formControlName="descripcion"></textarea>
+        <span></span>
+
+    </div>
+    <button type="submit" class="btn btn-primary" style="float: right;" (click)="agregarDatos()">Completar</button>
+
+        <span>Nombre</span><!-- validez del formulario-->
+        <pre>{{miFormulario.value.nombre}}</pre>
+        <span>Apellidos</span><!-- cno se han tocado los valores internos del formulario-->
+        <pre>{{miFormulario.value.apellidos}}</pre>
+        <span>Edad</span><!-- si el usuario ha tocado el formulario-->
+        <pre>{{miFormulario.value.edad}}</pre>
+        <span>Teléfono</span><!-- si el usuario ha tocado el formulario-->
+        <pre>{{miFormulario.value.telefono}}</pre>
+        <span>Email</span><!-- validez del formulario-->
+        <pre>{{miFormulario.value.email}}</pre>
+        <span>Descripción</span><!-- cno se han tocado los valores internos del formulario-->
+        <pre>{{miFormulario.value.descripcion}}</pre>
+       
+</form>
+
+
+<!--<div class="row">
+    <div class="col">
+
+        <span>Valid</span>   validez del formulario
+        <pre>{{miFormulario.valid}}</pre>
+        <span>Pristine</span>   cno se han tocado los valores internos del formulario
+        <pre>{{miFormulario.pristine}}</pre>
+        <span>Touched</span>   si el usuario ha tocado el formulario
+        <pre>{{miFormulario.touched}}</pre>
+        <span>Value</span>   si el usuario ha tocado el formulario
+        <pre>{{miFormulario.value | json}}</pre>
+        
+    </div>
+</div>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
