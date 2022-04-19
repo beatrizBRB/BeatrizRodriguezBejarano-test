@@ -1,6 +1,4 @@
-import { Component, Input, OnInit, Output, } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
-import { ContactoComponent } from '../contacto/contacto.component';
+import { Component, OnInit, } from '@angular/core';
 
 
 @Component({
@@ -19,7 +17,7 @@ export class CardComponent implements OnInit {
     
   }
   hola(){
-    console.log("hola")
+    console.log("hola")//PRUEBA PARA VER QUE SE ENVIA EL HOLA
   }
 
 }
